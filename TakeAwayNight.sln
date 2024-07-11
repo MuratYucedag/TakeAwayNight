@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34112.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontends", "Frontends", "{6E99E4AD-8B77-4B75-B5AB-8415203A22F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{0D0D91C2-0F11-47DB-BEF5-DC3877E5A922}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityServer", "IdentityServer", "{9F75D661-FEAC-420E-A27E-433A1613194E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requirements", "Requirements", "{B4D03660-1B08-4067-ABB1-F8730510644B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{437CDD81-B026-4898-A5BF-5A139E769060}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TakeAwayNight.Catalog", "Services\Catalog\TakeAwayNight.Catalog\TakeAwayNight.Catalog.csproj", "{A801B827-62FC-4098-98A3-AEA0D7E27521}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A801B827-62FC-4098-98A3-AEA0D7E27521}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A801B827-62FC-4098-98A3-AEA0D7E27521}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A801B827-62FC-4098-98A3-AEA0D7E27521}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A801B827-62FC-4098-98A3-AEA0D7E27521}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{437CDD81-B026-4898-A5BF-5A139E769060} = {0D0D91C2-0F11-47DB-BEF5-DC3877E5A922}
+		{A801B827-62FC-4098-98A3-AEA0D7E27521} = {437CDD81-B026-4898-A5BF-5A139E769060}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F4C887DB-C4FE-4720-BE06-635630FD6023}
+	EndGlobalSection
+EndGlobal
