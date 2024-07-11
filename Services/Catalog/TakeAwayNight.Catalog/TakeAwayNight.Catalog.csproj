@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
     <PackageReference Include="MongoDB.Bson" Version="2.27.0" />
     <PackageReference Include="MongoDB.Driver.Core" Version="2.27.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
@@ -14,7 +15,6 @@
 
   <ItemGroup>
     <Folder Include="Controllers\" />
-    <Folder Include="Dtos\SliderDtos\" />
   </ItemGroup>
 
 </Project>
