@@ -36,9 +36,10 @@ namespace TakeAwayNight.Catalog.Services.CategoryServices
             var values = await _categoryCollection.Find(x => x.CategoryId == id).FirstOrDefaultAsync();
             return _mapper.Map<GetByIdCategoryDto>(values);
         }
-        public Task UpdateCategoryAsync(UpdateCategoryDto updateCategoryDto)
+        public async Task UpdateCategoryAsync(UpdateCategoryDto updateCategoryDto)
         {
-            throw new NotImplementedException();
+            var values = _mapper.Map<Category>(updateCategoryDto);
+            await _categoryCollection.FindOneAndReplaceAsync(x => x.CategoryId == updateCategoryDto.CategoryId, values);
         }
     }
 }
