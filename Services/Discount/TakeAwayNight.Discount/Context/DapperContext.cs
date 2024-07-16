@@ -12,11 +12,7 @@ namespace TakeAwayNight.Discount.Context
         public DapperContext(IConfiguration configuration)
         {
             _configuration = configuration;
-            _connectionString = _configuration.GetConnectionString("Key");
-        }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("Server=DESKTOP-R7AR1ND;initial catalog=TakeAwayNigthDiscountDb;integrated Security=true");
+            _connectionString = _configuration.GetConnectionString("DefaultConnection");
         }
 
         public DbSet<DiscountCoupon> DiscountCoupons  { get; set; }

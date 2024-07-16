@@ -28,10 +28,23 @@ namespace TakeAwayNight.Discount.Controllers
 			return Ok("Kupon oluşturuldu");
 		}
 		[HttpDelete]
-		public async Task<IActionResult> DeleteDiscount(int id)
+		public async Task<IActionResult> DeleteDiscountCoupon(int id)
 		{
 			await _discountCouponService.DeleteDiscountCouponAsync(id);
 			return Ok("Kupon silindi");
+		}
+		[HttpPut]
+		public async Task<IActionResult> UpdateDiscountCoupon(UpdateDiscountCouponDto updateDiscountCouponDto)
+		{
+			await _discountCouponService.UpdateDiscountCouponAsync(updateDiscountCouponDto);
+			return Ok("Kupon güncellendi");
+		}
+
+		[HttpGet("{id}")]
+		public async Task<IActionResult> GetDiscountCoupon(int id)
+		{
+			var value = await _discountCouponService.GetByIdDiscountCouponAsync(id);
+			return Ok(value);
 		}
 	}
 }
