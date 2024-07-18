@@ -10,10 +10,10 @@ using TakeAwayNight.Domain.Entities;
 
 namespace TakeAwayNight.Application.Features.CQRS.Handlers.AddressHandlers
 {
-    public class GetByIdQueryHandler
+    public class GetAddressByIdQueryHandler
     {
         private readonly IRepository<Address> _repository;
-        public GetByIdQueryHandler(IRepository<Address> repository)
+        public GetAddressByIdQueryHandler(IRepository<Address> repository)
         {
             _repository = repository;
         }
