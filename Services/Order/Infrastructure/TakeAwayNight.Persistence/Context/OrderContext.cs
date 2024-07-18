@@ -12,7 +12,7 @@ namespace TakeAwayNight.Persistence.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=DESKTOP-R7AR1ND;initial catalog=TakeAwayOrderDb;integrated Security=true");
+            optionsBuilder.UseSqlServer("Server=DESKTOP-R7AR1ND;initial catalog=TakeAwayNightOrderDb;integrated Security=true");
         }
         public DbSet<Address> Addresses { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
