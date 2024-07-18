@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using TakeAwayNight.Application.Features.CQRS.Commands.AddressCommands;
 using TakeAwayNight.Application.Features.CQRS.Handlers.AddressHandlers;
+using TakeAwayNight.Application.Features.CQRS.Queries.AddressQueries;
 
 namespace TakeAwayNight.OrderApi.Controllers
 {
@@ -14,6 +15,7 @@ namespace TakeAwayNight.OrderApi.Controllers
         private readonly CreateAddressCommandHandler _createAddressCommandHandler;
         private readonly UpdateAddressCommandHandler _updateAddressCommandHandler;
         private readonly RemoveAddressCommandHandler _removeAddressCommandHandler;
+
         public AddressesController(GetAddressQueryHandler getAddressQueryHandler, GetAddressByIdQueryHandler getAddressByIdQueryHandler, CreateAddressCommandHandler createAddressCommandHandler, UpdateAddressCommandHandler updateAddressCommandHandler, RemoveAddressCommandHandler removeAddressCommandHandler)
         {
             _getAddressQueryHandler = getAddressQueryHandler;
@@ -35,6 +37,27 @@ namespace TakeAwayNight.OrderApi.Controllers
         {
             await _createAddressCommandHandler.Handle(command);
             return Ok("Ekleme işlemi yapıldı");
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> DeleteAddress(int id)
+        {
+            await _removeAddressCommandHandler.Handle(new RemoveAddressCommand(id));
+            return Ok("Silme işlemi yapıldı");
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetAddress(int id)
+        {
+            var values = await _getAddressByIdQueryHandler.Handle(new GetAddressByIdQuery(id));
+            return Ok(values);
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> UpdateAddress(UpdateAddressCommand command)
+        {
+            await _updateAddressCommandHandler.Handle(command);
+            return Ok("Güncelleme yapıldı");
         }
     }
 }
