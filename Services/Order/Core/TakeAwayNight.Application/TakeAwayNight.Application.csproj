@@ -10,4 +10,10 @@
     <ProjectReference Include="..\TakeAwayNight.Domain\TakeAwayNight.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\Mediator\Handlers\" />
+    <Folder Include="Features\Mediator\Commands\" />
+    <Folder Include="Features\Mediator\Queries\" />
+  </ItemGroup>
+
 </Project>
