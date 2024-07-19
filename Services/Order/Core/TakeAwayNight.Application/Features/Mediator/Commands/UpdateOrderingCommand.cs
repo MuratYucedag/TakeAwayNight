@@ -1,12 +1,13 @@
-﻿using System;
+﻿using MediatR;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TakeAwayNight.Application.Features.Mediator.Results
+namespace TakeAwayNight.Application.Features.Mediator.Commands
 {
-    public class GetOrderingQueryHandler
+    public class UpdateOrderingCommand : IRequest
     {
         public int OrderingId { get; set; }
         public string UserId { get; set; }
