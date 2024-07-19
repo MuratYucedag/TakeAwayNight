@@ -10,8 +10,4 @@
     <ProjectReference Include="..\TakeAwayNight.Domain\TakeAwayNight.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Features\CQRS\Handlers\OrderDetailHandlers\" />
-  </ItemGroup>
-
 </Project>
